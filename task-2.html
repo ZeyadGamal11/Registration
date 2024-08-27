@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" maxlength="9" required>
+            <div id="firstNameError" class="error"></div>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" maxlength="9" required>
+            <div id="lastNameError" class="error"></div>
+
+            <label for="email">User Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div id="confirmPasswordError" class="error"></div>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" pattern="\d{10}" required>
+            <div id="phoneNumberError" class="error"></div>
+
+            <label for="fileInput">Input File:</label>
+            <input type="file" id="fileInput" name="fileInput" accept=".jpg, .png" required>
+            <div id="fileInputError" class="error"></div>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
+    
